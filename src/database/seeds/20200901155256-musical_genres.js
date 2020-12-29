@@ -1,3 +1,4 @@
+// eslint-disable-next-line prettier/prettier
 const now = new Date();
 
 module.exports = [

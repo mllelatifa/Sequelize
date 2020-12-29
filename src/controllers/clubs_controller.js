@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // const { Club } = require("../models");
 
 const clubsController = {

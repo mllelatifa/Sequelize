@@ -1,3 +1,6 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line prettier/prettier
 const { pick } = require("lodash");
 
 // const { Dj, Musicalgenre, DjMusicalgenre } = require("../models");
