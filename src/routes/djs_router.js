@@ -20,6 +20,7 @@ router.get("/", async (request, response) => {
 
 router.post("/", async (request, response) => {
   const dj = request.body;
+  console.log(dj);
   const errors = djValidation(dj);
   if (errors) throw new ValidationError(errors);
 

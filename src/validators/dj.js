@@ -20,7 +20,7 @@ const biographyValidation = (biography) => {
   if (typeof biography !== "string") {
     return "La biographie doit être une chaîne de caractères";
   }
-  if (biography.length < 500 || biography.length > 2000) {
+  if (biography.length < 2 || biography.length > 2000) {
     return "La biographie doit contenir entre 500 et 2000 caractères";
   }
   return null;

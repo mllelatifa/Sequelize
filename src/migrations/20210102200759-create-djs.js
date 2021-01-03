@@ -17,13 +17,16 @@ module.exports = {
       biography: {
         type: Sequelize.STRING,
       },
-      soundcloud: {
+      souncloud: {
         type: Sequelize.STRING,
       },
       facebook: {
         type: Sequelize.STRING,
       },
       instagram: {
+        type: Sequelize.STRING,
+      },
+      spotify: {
         type: Sequelize.STRING,
       },
       beatport: {
@@ -42,7 +45,6 @@ module.exports = {
           key: "id",
         },
       },
-
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -1,35 +1,33 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line prettier/prettier
 const { pick } = require("lodash");
 
-// const { Dj, Musicalgenre, DjMusicalgenre } = require("../models");
+const { djs, Musicalgenre, DjMusicalgenre } = require("../models");
 const { NotFoundError } = require("../helpers/errors");
 
 const djsController = {
   getAllDjs: async () => {
     // Your code here
-    return {};
+    return await djs.findAll();
   },
 
   getDj: async (name) => {
     // Your code here
-    return {};
+
+    return await djs.findOne({ name });
   },
 
   addDj: async (data) => {
     // Your code here
-    return {};
+    return await djs.create(data);
   },
 
   updateDj: async (name, data) => {
     // Your code here
-    return {};
+    return djs.update(data, { where: { name } });
   },
 
   deleteDj: async (name) => {
     // Your code here
-    return {};
+    return await djs.destroy({ where: { name } });
   },
 };
 
