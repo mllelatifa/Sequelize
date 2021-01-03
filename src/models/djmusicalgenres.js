@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class djmusicalgenres extends Model {
     /**
@@ -12,12 +10,29 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
-  djmusicalgenres.init({
-    name: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'djmusicalgenres',
-  });
+  }
+  djmusicalgenres.init(
+    {
+      dj_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "djs",
+          key: "id",
+        },
+      },
+
+      musicalgenre_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "musicalgenres",
+          key: "id",
+        },
+      },
+    },
+    {
+      sequelize,
+      modelName: "djmusicalgenres",
+    }
+  );
   return djmusicalgenres;
 };

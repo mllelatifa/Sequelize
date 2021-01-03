@@ -1,18 +1,18 @@
 /* eslint-disable prettier/prettier */
-// const { Club } = require("../models");
+const { clubs } = require("../models");
 
 const clubsController = {
   getAllClubs: async () => {
     // Your code here
-    return {};
+    return await clubs.findAll();
   },
   getClub: async (name) => {
     // Your code here
-    return {};
+    return await clubs.findOne({ where: { name } });
   },
   addClub: async (data) => {
     // Your code here
-    return {};
+    return await clubs.create(data);
   },
 };
 
